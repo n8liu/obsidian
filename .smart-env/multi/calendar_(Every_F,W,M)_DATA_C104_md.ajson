@@ -1,0 +1,2 @@
+
+"smart_sources:calendar/(Every F,W,M) DATA C104.md": {"path":"calendar/(Every F,W,M) DATA C104.md","last_embed":{"hash":null},"embeddings":{},"last_read":{"hash":"gc986q","at":1758177056193},"class_name":"SmartSource","last_import":{"mtime":1758177043190,"size":130,"at":1758177056195,"hash":"gc986q"},"blocks":{"#---frontmatter---":[1,9]},"outlinks":[],"metadata":{"title":"DATA C104","allDay":false,"startTime":"15:00","endTime":"16:00","type":"recurring","daysOfWeek":["F","W","M"],"startRecur":"2025-09-15"},"task_lines":[]},
