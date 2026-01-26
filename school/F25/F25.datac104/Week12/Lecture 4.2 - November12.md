@@ -1,1 +1,0 @@
-Joanna Radin → extraction of information from tribes and transformed into data. later was used and shared beyond the respected study of the data. Pima tribe was injust by big data collection and usage

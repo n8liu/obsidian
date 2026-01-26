@@ -1,5 +1,0 @@
-Amis Srinivasan → calculating compassion & effective altruism (EA)
-- quality of life → how many years you have left
-- marginality → a doctor in a poor country is 100x more value than one in a richer country
-- counterfactuals → a richer person is more valuable than a charity worker because the rich person can donate to charity (people more replaceable than others)
-The purpose of this reading is to critique the Effective Altruism movement by demonstrating that its reliance on utilitarian calculation and economic efficiency ultimately reinforces the political status quo and undermines the personal connections central to human ethics. While acknowledging that MacAskill’s approach offers a radical challenge to comfortable lifestyles by demanding we do the "most good", the author aims to reveal that EA functions as a "feel-good guide" for the privileged. The text argues that by turning moral life into an investment opportunity and ignoring systemic oppression, EA leaves the underlying structures of global inequality "just as it is"

@@ -21,8 +21,9 @@ Detailed course notes, lecture materials, and study resources organized by semes
 
 ### 💻 Coding Practice (`LEETCODE/`)
 Algorithm and data structure practice notes:
-- Easy problems with solutions and explanations
-- Medium problems with detailed approaches
+- Easy problems
+- Medium problems
+- Hard problems
 - Overall notes and patterns
 
 ### 📝 Personal Organization
@@ -48,7 +49,3 @@ This vault serves as:
 ## 📖 Usage
 
 This repository is primarily for personal use, but the structure and organization may serve as inspiration for others building their own knowledge management systems.
-
----
-
-*Built with [Obsidian](https://obsidian.md/) - A powerful knowledge base that works on top of a local folder of plain text Markdown files.*
