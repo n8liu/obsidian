@@ -1,4 +1,5 @@
-*
-!*/
-!everything/
-!.gitignore
+.obsidian/
+.smart-env/
+copilot/
+everything/
+.DS_Store
