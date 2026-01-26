@@ -9,5 +9,3 @@ class Solution:
                 dict[i] = 0 # initilize all added numbers to 0
         return False
 ```
-
-

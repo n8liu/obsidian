@@ -9,3 +9,6 @@ class Solution:
                 return [dict[complement], i] # [if previous number is the complement, index is the second number found]
             dict[nums[i]] = i # if not in orignal list, add number to dictionary with key as the number and the value as the index
 ```
+
+
+remember this one
