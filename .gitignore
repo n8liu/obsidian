@@ -1,0 +1,3 @@
+echo "/*" > .gitignore
+echo "!/everything/" >> .gitignore
+echo "!/.gitignore" >> .gitignore
