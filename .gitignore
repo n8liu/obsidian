@@ -1,1 +1,4 @@
-printf "*\n!*/\n!everything/\n!.gitignore" > .gitignore
+*
+!*/
+!everything/
+!.gitignore
