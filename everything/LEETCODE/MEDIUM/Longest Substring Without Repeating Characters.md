@@ -14,6 +14,6 @@ class Solution:
                 i = max(char[s[j]], i) # move the window left pointer right until no duplicate
             
             ans = max(ans, j - i + 1) # checks if the current length window is bigger than old
-            char[s[j]] = j + 1 # add/update character to set plus character count
+            char[s[j]] = j + 1 # add/update character to set plus character index, the reason for this is so i can update instantly to last previous seen of the character
         return ans
 ```
