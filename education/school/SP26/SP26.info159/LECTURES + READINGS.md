@@ -45,5 +45,8 @@ Subtokenization → breaking words into smaller units (prefixes, suffixes, etc)
 ## Reading Unit 5
 - 
 
+## QUIZ 1
+- 
+
 # Lecture 4
 - 
