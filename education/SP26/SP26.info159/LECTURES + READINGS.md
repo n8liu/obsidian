@@ -1,4 +1,4 @@
-# Lecture 1 (1/20)
+# Lecture 1 - Intro (1/20)
 NPL is interdisciplinary → used in many majors
 
 Turing Test → human vs computer can tell difference who wrote it
@@ -6,7 +6,7 @@ Turing Test → human vs computer can tell difference who wrote it
 LLM → mainly performs well on trained data or sentiment analysis![[Screenshot 2026-01-28 at 3.08.49 PM.png]]![[Screenshot 2026-01-28 at 3.11.12 PM.png]]
 
 
-# Lecture 2 (1/22)
+# Lecture 2 - Word (1/22)
 Tokenization → break down sentences or words into basic units
 
 Subtokenization → breaking words into smaller units (prefixes, suffixes, etc)
@@ -47,7 +47,7 @@ Herdan’s/Heap’s Law → relationship between vocabulary size grows indefinit
 7. How are regular expressions relevant to tokenization?
 	- used to split text by punctuation or whitespace or contractions apart. mainly used for cleaning, splitting, and standardizing text
 
-# Lecture 3 (1/27)
+# Lecture 3 - Lexical Semantics (1/27)
 Cosine Similarity → frequency correlation between two vector words where 1 is upper bound (high correlation) and 0 is lower bound (low correlation)
 	- equation:![[Screenshot 2026-01-29 at 10.40.47 AM.png]]
 TF-IDF (Term Frequency-Inverse Document Frequency)→ the row count divide by total row count times log, if every row contains at least one count of the word
@@ -116,13 +116,14 @@ Dense Vectors are generalize to be better because fewer parameters to learn and 
 		- analogy tasks: a is to b as c is to d
 		- contextual similarity: using SCWS or WiC for similarity judgement
 
-## QUIZ 1 (1/29)
-- 
+## QUIZ 1
+- 1/27 Reading + Lecture
 
-# Lecture 4 (1/29)
+# Lecture 4  - Classification (1/29)
 Classification → x is all text and y is what to find
-- supervised learning → given x find y
-Text Categorization → 
+- supervised learning → given training data of x find y pairs by learning ĥ(x)
+- categorical, enumerable (countable) categories
+Text Categorization
 
 | task                 | x      | y                                |
 | -------------------- | ------ | -------------------------------- |
@@ -131,35 +132,118 @@ Text Categorization →
 | genre classification | novel  | [detective, romance, gothic, …]  |
 | sentiment analysis   | text   | [positive, negative, neutral, …] |
 |                      |        |                                  |
-Sentiment Analysis → is the entire text positive or negative or both with respect to the implicit target?
+Sentiment Analysis → is the entire text positive or negative or neutral with respect to the implicit target?
+- the use of positive/negative tone
+- Sentiment Dictionaries → choice of words and comparing positive vs negative
+- sentiment analysis is hard because many times it requires deep world + contextual knowledge
+ĥ(x) → classification function
+- formal structure of learning; logistic regression or convolutional neural network
+- the representation of data
 
-Bago of Words →
+Bag of Words → unordered frequency count of words
 
 Binary Logistic Regression →![[Screenshot 2026-01-29 at 4.12.13 PM.png]]
 
-Conditional Likelihood →
+Conditional Likelihood → dot product → exp → binary logistic regression (sigmoid) → we want the probability ot be high
+- gradient ascent → maximize conditional log likelihood
+- gradient descent → minimize conditional log likelihood
+![[Screenshot 2026-02-05 at 11.43.50 AM.png]]
+![[Screenshot 2026-02-05 at 11.47.45 AM.png]]
 
-Stochastic Gradient Descent → ![[Screenshot 2026-01-29 at 4.24.27 PM.png]]
+Gradient Descent → derivative of the sum of log 0 and log 1 of binary logistic regression![[Screenshot 2026-02-05 at 11.49.59 AM.png]]
 
-L2 Regularization →![[Screenshot 2026-01-29 at 4.25.19 PM.png]]
+Batch Gradient Descent → updates every training point for every beta update, slower
+Stochastic Gradient Descent → updates data points AFTER beta
+![[Screenshot 2026-01-29 at 4.24.27 PM.png]]
+![[Screenshot 2026-02-05 at 11.49.59 AM.png]]
 
-L1 Regularization →![[Screenshot 2026-01-29 at 4.25.28 PM.png]]
+L2 Regularization → shrinks all weights to small values
+![[Screenshot 2026-01-29 at 4.25.19 PM.png]]
+
+L1 Regularization → penalize large weights to exactly zero
+![[Screenshot 2026-01-29 at 4.25.28 PM.png]]
 - encourages coefficients to be exactly 0.
 
 Multiclass Logistic Regression →
+![[Screenshot 2026-02-05 at 12.50.54 PM.png]]
+Confusion Matrix → 
+![[Screenshot 2026-02-05 at 12.52.16 PM.png]]
+Evaluation → A critical part of development new algorithms and methods and demonstrating that they work
 
-Accuracy → 
+Accuracy → diagonal of confusion matrix divide by number of N
 
-Precision →
+Precision → sum of true divide by sum of total predicted. ex → 100/(100 + 30) is positive precision
 
-Recall →
+Recall → sum fo true divide by sum of total true. ex → 100 / (100 + 2 + 15) is true positive
 
 F score →![[Screenshot 2026-01-29 at 4.38.30 PM.png]]
 
-## Reading Unit
-- 
-# Lecture 5
+## Reading Unit 4
+Classification → the process of labeling an input, primary example is sentiment analysis
+Logistic Regression → supervised machine learning algorithm
+A probabilistic classifier consists of four main components:
+1. Feature representation: A vector representing the input.
+2. Classification function: Computes the estimated class probability (e.g., Sigmoid or Softmax).
+3. Objective function: A loss function to minimize error (e.g., Cross-Entropy).
+4. Optimization algorithm: A method to update parameters (e.g., Stochastic Gradient Descent).
+
+# Lecture 5 - Annotation (2/3)
+Dogmatism → without a doubt true without evidence
+
+Literary Time → how fast to read a passage
+
+Annotation Pipeline → 
+![[Screenshot 2026-02-05 at 1.22.17 PM.png|[100x100]]
+Annotation Guidelines → 
+
+Adjudication → Adjudication is the process of deciding on a single annotation for a piece of text, using information about the independent annotations.
+
+Cohen’s Kappa →
+![[Screenshot 2026-02-05 at 1.38.41 PM.png]]
+- good for two categories
+- observed agreement rate: diagonal
+	- 88/100 = 0.88
+- expected agreement rate: rows * column of one feature + rows * column of second feature
+	- 15/100 * 11/100 + 85/100 * 89/100 = 0.773
+
+Fleiss’ Kappa → 
+- good for 3+ categories
+- Observed Agreement (Pˉ): You calculate the proportion of agreeing pairs for each subject, then average them.
+- Expected Agreement (Pˉe​): You calculate the proportion of total assignments to each category (across all subjects) and square them.
+![[Screenshot 2026-02-05 at 2.21.54 PM.png]]
+Krippendorf’s Alpha 
+- measures disagreement
+- Do​ (Observed Disagreement): The weighted average of disagreements. If two raters disagree on a Nominal value (A vs B), the weight is 1. If they disagree on Ordinal data (Low vs High), the weight is higher than (Low vs Medium).
+- De​ (Expected Disagreement): The disagreement expected by chance, essentially treating all observations as if they were thrown into a bucket and randomly paired.![[Screenshot 2026-02-05 at 2.23.12 PM.png]]
+## Reading Unit 6 ← different book
 - 
 
-## Reading Unit
+# Lecture 6 - Neural Classification (2/5)
+Neural Networks
+- Non-linear interactions of input features
+- Multiple layers to capture hierarchical structure
+- Tremendous flexibility on design choices (exchange feature
+engineering for model engineering)
+• Articulate model structure and use the chain rule to derive parameter
+updates.
+
+Feedforward Neural Network
+- input to output needs at least one hidden layer
+
+Activation Functions
+- sigmoid function![[Screenshot 2026-02-05 at 4.00.46 PM.png]]
+- tanh function![[Screenshot 2026-02-05 at 4.03.46 PM.png]]
+- ReLU function![[Screenshot 2026-02-05 at 4.03.54 PM.png]]
+
+Back-propagation → Given training samples of <x,y> pairs, we can use stochastic gradient descent to find the values of W and V that minimize the loss.
+
+Convolutional Networks
+- 2D Convolution → reduction in 2D
+- 1D Convolution → a signal processing and neural network operation that slides a filter (kernel) along one dimension of data—typically time, text, or sensor sequences—to extract local feature
+- Indicator Vector →
+
+## QUIZ 2
+- 1/29 and 2/3 Reading + Lecture
+
+## Reading Unit 6
 - 
